@@ -1,9 +1,9 @@
 {
   "id": "crit-theme",
   "title": "Crit Theme",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "manifest": "https://github.com/BurningBagel/CritTheme/releases/latest/download/module.json",
-  "download": "https://github.com/BurningBagel/CritTheme/releases/download/0.0.1/module.zip",
+  "download": "https://github.com/BurningBagel/CritTheme/releases/download/0.0.3/module.zip",
   "socket": true,
   "compatibility": {
     "minimum": "13",
