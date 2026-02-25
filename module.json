@@ -1,0 +1,43 @@
+{
+  "id": "crit-theme",
+  "title": "Crit Theme",
+  "version": "0.0.1",
+  "socket": true,
+  "minimumCoreVersion": "0.8.8",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "description": "<p>Module for the PF2e system that lets you give actors theme songs that play when they get a critical hit or an enemy critically fails against an effect they created.</p>",
+  "authors": [
+    {
+      "name": "Burning Bagel"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
+        "compatibility": {
+          "minimum": "5.3.2",
+          "verified": "7.0.5"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "socketlib",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+      }
+    ] 
+  },
+  "flags": {
+    "canUpload": true
+  },
+  "esmodules": [ 
+    "scripts/crit-theme.js"
+  ]
+}
