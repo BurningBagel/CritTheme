@@ -10,20 +10,20 @@ export const PreCreateChatMessage = {
         const type = chatMessagePF2e.flags.pf2e.context.type;
         const outcome = chatMessagePF2e.flags.pf2e.context.outcome;
         const actor = author.speaker.actor;
-
+        
         if (
           (type == consts.TYPE_ATTACK &&
             outcome == consts.OUTCOME_CRITICAL_SUCCESS) ||
-          (type == consts.TYPE_SAVE &&
-            outcome == consts.OUTCOME_CRITICAL_FAILURE)
-        ) {
-          if (amIGM) {
-            playCritTheme(actor, type, outcome);
-          } else {
-            socketlibSocket.executeAsGM("playCritTheme", actor, type, outcome);
-          }
-        }
-      } catch (error) {
+            (type == consts.TYPE_SAVE &&
+              outcome == consts.OUTCOME_CRITICAL_FAILURE)
+            ) {
+              if (amIGM) {
+                playCritTheme(actor, type, outcome);
+              } else {
+                socketlibSocket.executeAsGM("playCritTheme", actor, type, outcome);
+              }
+            }
+          } catch (error) {
         return;
       }
     });

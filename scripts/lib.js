@@ -21,7 +21,7 @@ async function critThemePlayer(soundToPlay,fadeSetting,fadeDuration,playlist,sto
 
 
 export async function playCritTheme(actor, type, outcome){
-  if(type != consts.TYPE_ATTACK || type != consts.TYPE_SAVE) return;
+  if(type != consts.TYPE_ATTACK && type != consts.TYPE_SAVE) return;
   const fadeSetting = game.settings.get(consts.MODULE_NAME, 'fade-out');
   const fadeDuration = game.settings.get(consts.MODULE_NAME, 'fade-duration') * 1000; 
   const stopOtherSounds = game.settings.get(consts.MODULE_NAME, 'stop-other-sounds');
