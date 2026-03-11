@@ -68,6 +68,11 @@ export async function createPromptWindow(userId){
     console.error("Playlist not found! Make sure you have a playlist named " + consts.PLAYLIST_NAME);
     return;
   }
+  
+  options.push({
+    value:"",
+    label: "~None~"
+  })
     
   playlist.sounds.forEach( sound => {
     options.push({
